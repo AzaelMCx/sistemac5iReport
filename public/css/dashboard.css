@@ -1,0 +1,182 @@
+/* Estilo profesional para la barra de búsqueda */
+.search-bar {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 4px solid #ced4da; /* Borde gris claro */
+    color: #495057; /* Color del texto gris oscuro */
+    padding: 12px 20px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    width: 100%; /* Ocupa todo el ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease; /* Animación suave */
+    font-size: 16px; /* Tamaño de letra */
+    outline: none;
+}
+
+/* Efecto cuando la barra está enfocada */
+.search-bar:focus {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    border-color: #80bdff; /* Borde azul claro al enfocar */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al enfocar */
+}
+
+/* Estilo para el placeholder (texto dentro de la barra) */
+.search-bar::placeholder {
+    color: #6c757d; /* Color gris claro para el placeholder */
+    font-style: italic;
+}
+
+/* Estilo para la barra lateral */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px; /* Ancho más amplio para mejor visibilidad */
+    height: 100%;
+    background-color: #282c34; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    padding: 20px 10px; /* Espaciado interno */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: width 0.3s ease; /* Animación suave para el ancho */
+}
+
+/* Título de la barra lateral */
+.sidebar-title {
+    font-size: 20px; /* Tamaño de letra mayor */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio inferior */
+    display: flex;
+    align-items: center; /* Centrar el ícono y texto verticalmente */
+}
+
+/* Icono del título */
+.sidebar-title i {
+    margin-right: 10px; /* Espacio entre ícono y texto */
+}
+
+/* Estilo para la lista de opciones */
+.sidebar ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada opción */
+.sidebar ul li {
+    margin: 15px 0; /* Espaciado entre opciones */
+}
+
+/* Enlaces de las opciones */
+.sidebar ul li a {
+    color: #f2f4f5; /* Color azul claro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de letra */
+    padding: 10px 15px; /* Espaciado interno */
+    display: block; /* Para ocupar todo el ancho */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave para el fondo */
+}
+
+/* Efecto al pasar el mouse */
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente al pasar el mouse */
+}
+
+/* Ajustar el contenido principal para evitar invasión */
+.ml-16 {
+    margin-left: 200px; /* Ajuste según el ancho del menú lateral */
+}
+
+/* Título del menú */
+.menu-title {
+    color: white; /* Color del texto */
+    font-size: 20px; /* Tamaño de letra */
+    text-align: center; /* Centrar texto */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Estilo para la bienvenida del usuario */
+.user-welcome {
+    display: flex; /* Usar flexbox para alineación */
+    align-items: center; /* Centrar verticalmente */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de letra */
+    margin-bottom: 20px; /* Espacio inferior */
+    padding: 0 10px; /* Espacio lateral */
+}
+
+.user-welcome i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 40px; /* Tamaño del ícono */
+}
+
+/*ENCABEZADO TITULO
+
+/* Contenedor del encabezado para centrar ícono y título */
+.header-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 2px; /* Ajusta el margen superior si es necesario */
+}
+
+/* Estilo para el ícono del encabezado */
+#header-icon {
+    font-size: 40px; /* Tamaño grande para el ícono */
+    color: #ffffff; /* Color del ícono */
+    margin-right: 20px; /* Espacio entre el ícono y el título */
+}
+
+/* Estilo para el título del encabezado */
+.header-title {
+    font-size: 22px; /* Tamaño grande para el título */
+    color: #fdfdfd; /* Color del título */
+}
+
+/* Si necesitas ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #header-icon {
+        font-size: 40px; /* Tamaño más pequeño para pantallas móviles */
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+}
+
+/*ENCABEZADO TITULO FIN
+
+/*Mapa contenedor
+
+/* Ajustes al contenedor del mapa */
+/* Nuevo estilo para el contenedor del mapa */
+#map {
+    margin-left: 1px; /* Mover un poco a la derecha */
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    background-color: #f8f9fa; /* Fondo gris claro */
+    height: 1400px; /* Ajustar la altura del mapa */
+    width: 100%; /* Asegurar que el mapa ocupe todo el contenedor */
+}
+
+/* Ajuste general para el contenedor del mapa */
+.map-container {
+    margin-left: 1px; /* Espacio adicional desde la barra lateral */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 100%; /* Evitar que se salga del contenedor */
+}
+
+/* Estilos del título del mapa */
+.map-title {
+    font-size: 15px; /* Tamaño de letra grande */
+    font-weight: bold; /* Negrita */
+    text-align: left; /* Centrado */
+    color: #fcfcfc; /* Color del texto */
+    margin-bottom: 10px; /* Separación del mapa */
+    font-family: 'Roboto', sans-serif; /* Tipo de letra elegante */
+}
+.map-icon {
+    color: white; /* Cambia el color a blanco */
+    font-size: 30px; /* Ajusta el tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el título */
+}
