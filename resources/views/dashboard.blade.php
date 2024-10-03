@@ -58,17 +58,22 @@
                 <div class="p-4">
                     <i class="fa-solid fa-map-location-dot map-icon"></i> <!-- Ícono de verificación -->
                     <h3 class="map-title">Mapa</h3> <!-- Título del mapa -->
-                    <div id="map" style="height: 700px; width: 1400px;" class="rounded"></div>
+                    <div id="map" style="height: 700px; width: 1030px;" class="rounded"></div>
                 </div>
                 
     
                 <!-- Contenedor de formularios para añadir reporte y nueva cámara -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     
+
+
                     <!-- Sección para añadir reporte de cámara -->
-                    <div class="bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
-                        <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Reporte de Cámara') }}</h3>
-                        <form method="POST" action="{{ route('reports.store') }}">
+                     <div id="add-reporte-container" class="container-form bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
+                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Reporte de Cámara') }}</h3>
+                     <form method="POST" action="{{ route('reports.store') }}">
+                    <!-- Contenido del formulario de reporte -->
+
+
                             @csrf
                             <div class="mb-2">
                                 <label for="camera_id" class="block text-sm font-medium text-gray-700 dark:text-gray-200">{{ __('Seleccionar Cámara') }}</label>
@@ -96,11 +101,17 @@
                             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md">{{ __('Añadir Reporte') }}</button>
                         </form>
                     </div>
+
+
+
     
                     <!-- Sección para añadir nueva cámara -->
-                    <div class="bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
-                        <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Nueva Cámara') }}</h3>
-                        <form method="POST" action="{{ route('cameras.store') }}">
+                    <div id="add-camera-container" class="container-form bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
+                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Nueva Cámara') }}</h3>
+                            <form method="POST" action="{{ route('cameras.store') }}">
+                     <!-- Contenido del formulario de añadir cámara -->
+
+                        
                             @csrf
                             <div class="mb-2">
                                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">{{ __('Nombre de la cámara') }}</label>

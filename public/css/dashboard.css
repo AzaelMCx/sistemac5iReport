@@ -164,6 +164,7 @@
     margin-left: 1px; /* Espacio adicional desde la barra lateral */
     width: 100%; /* Ocupar todo el ancho disponible */
     max-width: 100%; /* Evitar que se salga del contenedor */
+    
 }
 
 /* Estilos del título del mapa */
@@ -180,3 +181,46 @@
     font-size: 30px; /* Ajusta el tamaño del ícono */
     margin-right: 10px; /* Espacio entre el ícono y el título */
 }
+
+
+
+
+/* Estilos para los contenedores de formularios */
+.container-form {
+    position: absolute; /* Para poder posicionarlos en la pantalla */
+    width: 350px;  /* Ajuste de ancho */
+    height: 300px; /* Ajuste de altura */
+    padding: 20px; /* Más espacio interno */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más profunda para un efecto más marcado */
+    border-radius: 10px; /* Bordes ligeramente más redondeados */
+    color: white; /* Cambiar color de texto a blanco para mayor contraste */
+    font-family: 'Arial', sans-serif; /* Fuente moderna */
+}
+
+/* Estilo del contenedor de "Añadir Reporte de Cámara" */
+#add-reporte-container {
+    top: 310px;  /* Ajustar posición desde la parte superior */
+    right: 150px; /* Ajustar distancia desde la derecha */
+    background-color: #242527; /* Color oscuro para fondo */
+    border: 1px solid #3a3b3c; /* Borde suave para dar estructura */
+}
+
+/* Estilo del contenedor de "Añadir Nueva Cámara" */
+#add-camera-container {
+    top: 705px;  /* Ajuste de la posición debajo del contenedor de reporte */
+    right: 150px; /* Distancia desde la derecha */
+    background-color: #1d1c1c; /* Fondo más oscuro */
+    border: 1px solid #333; /* Borde más oscuro */
+}
+
+/* Hover effect para botones */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambio de color al hacer hover */
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el cursor */
+}
+
+
