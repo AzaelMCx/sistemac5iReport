@@ -41,16 +41,16 @@
 
 /* Título de la barra lateral */
 .sidebar-title {
-    font-size: 20px; /* Tamaño de letra mayor */
+    font-size: 30px; /* Tamaño de letra mayor */
     font-weight: bold; /* Negrita */
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-bottom: 70px; /* Espacio inferior */
     display: flex;
     align-items: center; /* Centrar el ícono y texto verticalmente */
 }
 
 /* Icono del título */
 .sidebar-title i {
-    margin-right: 10px; /* Espacio entre ícono y texto */
+    margin-right: 50px; /* Espacio entre ícono y texto */
 }
 
 /* Estilo para la lista de opciones */
@@ -62,7 +62,7 @@
 
 /* Estilo para cada opción */
 .sidebar ul li {
-    margin: 15px 0; /* Espaciado entre opciones */
+    margin: 8px 0; /* Espaciado entre opciones */
 }
 
 /* Enlaces de las opciones */
@@ -91,7 +91,7 @@
     color: white; /* Color del texto */
     font-size: 20px; /* Tamaño de letra */
     text-align: center; /* Centrar texto */
-    margin: 20px 0; /* Margen superior e inferior */
+    margin: 40px 0; /* Margen superior e inferior */
 }
 
 /* Estilo para la bienvenida del usuario */
@@ -100,12 +100,12 @@
     align-items: center; /* Centrar verticalmente */
     color: white; /* Color del texto */
     font-size: 16px; /* Tamaño de letra */
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-bottom: 50px; /* Espacio inferior */
     padding: 0 10px; /* Espacio lateral */
 }
 
 .user-welcome i {
-    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
     font-size: 40px; /* Tamaño del ícono */
 }
 
@@ -128,7 +128,7 @@
 
 /* Estilo para el título del encabezado */
 .header-title {
-    font-size: 22px; /* Tamaño grande para el título */
+    font-size: 23px; /* Tamaño grande para el título */
     color: #fdfdfd; /* Color del título */
 }
 
@@ -139,7 +139,7 @@
     }
 
     .header-title {
-        font-size: 20px;
+        font-size: 50px;
     }
 }
 
@@ -151,7 +151,7 @@
 /* Nuevo estilo para el contenedor del mapa */
 #map {
     margin-left: 1px; /* Mover un poco a la derecha */
-    border: 2px solid #ccc; /* Borde gris claro */
+    border: 3px solid #ccc; /* Borde gris claro */
     border-radius: 20px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
     background-color: #f8f9fa; /* Fondo gris claro */
@@ -164,6 +164,8 @@
     margin-left: 1px; /* Espacio adicional desde la barra lateral */
     width: 100%; /* Ocupar todo el ancho disponible */
     max-width: 100%; /* Evitar que se salga del contenedor */
+    
+    height: 70vh; /* Ajusta la altura al 70% de la altura de la ventana */
     
 }
 
@@ -185,42 +187,80 @@
 
 
 
+
 /* Estilos para los contenedores de formularios */
 .container-form {
-    position: absolute; /* Para poder posicionarlos en la pantalla */
-    width: 350px;  /* Ajuste de ancho */
-    height: 300px; /* Ajuste de altura */
-    padding: 20px; /* Más espacio interno */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más profunda para un efecto más marcado */
-    border-radius: 10px; /* Bordes ligeramente más redondeados */
-    color: white; /* Cambiar color de texto a blanco para mayor contraste */
-    font-family: 'Arial', sans-serif; /* Fuente moderna */
+    position: absolute; /* Para posicionar en la pantalla */
+    width: 350px; /* Ajuste de ancho */
+    height: 390px; /* Ajuste de altura */
+    padding: 20px; /* Espacio interno */
+    background-color: #2b2d42; /* Fondo oscuro */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Sombra profunda para efecto elegante */
+    border-radius: 12px; /* Bordes suaves */
+    border: none; /* Sin borde */
+    color: #edf2f4; /* Texto en color claro para buen contraste */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y profesional */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición */
+}
+
+/* Estilo de los títulos de los formularios */
+.container-form h3 {
+    color: #bbbec4; /* Color gris suave para los títulos */
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center; /* Alinear el título al centro */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 /* Estilo del contenedor de "Añadir Reporte de Cámara" */
 #add-reporte-container {
-    top: 310px;  /* Ajustar posición desde la parte superior */
-    right: 150px; /* Ajustar distancia desde la derecha */
-    background-color: #242527; /* Color oscuro para fondo */
-    border: 1px solid #3a3b3c; /* Borde suave para dar estructura */
+    top: 324px; /* Posición superior ajustada */
+    left: 1470px; /* Ajuste desde el borde izquierdo */
+    background-color: #0c2e55; /* Fondo azul oscuro */
 }
 
 /* Estilo del contenedor de "Añadir Nueva Cámara" */
 #add-camera-container {
-    top: 705px;  /* Ajuste de la posición debajo del contenedor de reporte */
-    right: 150px; /* Distancia desde la derecha */
-    background-color: #1d1c1c; /* Fondo más oscuro */
-    border: 1px solid #333; /* Borde más oscuro */
+    top: 750px; /* Ajuste de la posición */
+    left: 1470px; /* Ajuste desde el borde izquierdo */
+    background-color: #0c2e55; /* Fondo azul medio */
 }
 
-/* Hover effect para botones */
-button {
+/* Estilos de los campos de entrada */
+.container-form input, 
+.container-form select, 
+.container-form textarea {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 15px;
+    border: 1px solid #6c757d; /* Bordes grises para inputs */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #343a40; /* Fondo oscuro para los inputs */
+    color: #edf2f4; /* Texto claro */
+    transition: border-color 0.3s ease;
+}
+
+.container-form input:focus, 
+.container-form select:focus, 
+.container-form textarea:focus {
+    border-color: #fca311; /* Cambio de color al hacer foco */
+}
+
+/* Estilos para los botones */
+.container-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fca311; /* Fondo naranja brillante */
+    color: #2b2d42; /* Texto oscuro en el botón */
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-    background-color: #0056b3; /* Cambio de color al hacer hover */
-    transform: scale(1.05); /* Efecto de crecimiento al pasar el cursor */
+.container-form button:hover {
+    background-color: #e07a5f; /* Cambio de color al hacer hover */
+    transform: scale(1.03); /* Efecto de crecimiento al pasar el cursor */
 }
-
-

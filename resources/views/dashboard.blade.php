@@ -19,8 +19,10 @@
     
         <ul>
             <li><a href="#"> <i class="fa-solid fa-triangle-exclamation"></i> Reportes </a></li>
-            <li><a href="#"> <i class="fa-solid fa-location-dot"></i> Añadir Camara</a></li>
+            <li><a href="#"> <i class="fa-solid fa-location-dot"></i> Actualizar Camara</a></li>
             <li><a href="#"><i class="fa-regular fa-circle-check"></i> Tickets</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Ayuda</a></li>
+            <li><a href="#"><i class="fa-regular fa-bell"></i> Notificaciones</a></li>
             <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a></li>
             <!-- Aquí podrás añadir más opciones más adelante -->
         </ul>
@@ -58,7 +60,7 @@
                 <div class="p-4">
                     <i class="fa-solid fa-map-location-dot map-icon"></i> <!-- Ícono de verificación -->
                     <h3 class="map-title">Mapa</h3> <!-- Título del mapa -->
-                    <div id="map" style="height: 700px; width: 1030px;" class="rounded"></div>
+                    <div id="map" style="height: 820px; width: 1090px;" class="rounded"></div>
                 </div>
                 
     
@@ -69,7 +71,7 @@
 
                     <!-- Sección para añadir reporte de cámara -->
                      <div id="add-reporte-container" class="container-form bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
-                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Reporte de Cámara') }}</h3>
+                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Reporte ') }}</h3>
                      <form method="POST" action="{{ route('reports.store') }}">
                     <!-- Contenido del formulario de reporte -->
 
@@ -95,8 +97,8 @@
                                 </select>
                             </div>
                             <div class="mb-2">
-                                <label for="reported_at" class="block text-sm font-medium text-gray-700 dark:text-gray-200">{{ __('Fecha del reporte') }}</label>
-                                <input type="date" name="reported_at" id="reported_at" class="block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm p-2">
+                                <label for="report_date" class="block text-sm font-medium text-gray-700 dark:text-gray-200">{{ __('Fecha del reporte') }}</label>
+                                <input type="date" name="report_date" id="report_date" class="block w-full border border-gray-300 dark:border-gray-700 rounded-md shadow-sm p-2">
                             </div>
                             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md">{{ __('Añadir Reporte') }}</button>
                         </form>
@@ -107,7 +109,7 @@
     
                     <!-- Sección para añadir nueva cámara -->
                     <div id="add-camera-container" class="container-form bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-4">
-                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Nueva Cámara') }}</h3>
+                            <h3 class="text-lg font-bold text-gray-800">{{ __('Añadir Cámara') }}</h3>
                             <form method="POST" action="{{ route('cameras.store') }}">
                      <!-- Contenido del formulario de añadir cámara -->
 
