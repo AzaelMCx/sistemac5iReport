@@ -18,7 +18,7 @@
         </div>
     
         <ul>
-            <li><a href="#"> <i class="fa-solid fa-triangle-exclamation"></i> Reportes </a></li>
+            <li><a href="{{ route('cameras.with.reports') }}"> <i class="fa-solid fa-triangle-exclamation"></i> Reportes </a></li>
             <li><a href="#"> <i class="fa-solid fa-location-dot"></i> Actualizar Camara</a></li>
             <li><a href="#"><i class="fa-regular fa-circle-check"></i> Tickets</a></li>
             <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Ayuda</a></li>

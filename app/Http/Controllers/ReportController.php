@@ -50,4 +50,14 @@ class ReportController extends Controller
         // Retornar la vista de dashboard con los reportes
         return view('dashboard', compact('reports'));
     }
+
+    // Mostrar listado de cámaras con reportes
+    public function camerasWithReports()
+    {
+        // Obtener cámaras que tienen reportes
+        $cameras = Camera::has('reports')->with('reports')->get();
+        //dd($cameras);
+        // Retornar la vista con las cámaras
+        return view('cameras_with_reports', compact('cameras'));
+    }
 }

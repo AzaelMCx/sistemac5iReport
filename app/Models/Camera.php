@@ -42,4 +42,7 @@ class Camera extends Model
     {
         return $this->name . ' (' . $this->latitude . ', ' . $this->longitude . ')';
     }
+
+    
+    
 }
