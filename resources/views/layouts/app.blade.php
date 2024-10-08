@@ -31,6 +31,24 @@
 
             <!-- Page Content -->
             <main>
+                {{-- Mostrar mensajes de éxito --}}
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                {{-- Mostrar mensajes de error --}}
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 {{-- Contenido que utiliza $slot --}}
                 {{ $slot }}
 

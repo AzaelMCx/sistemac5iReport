@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,7 +14,9 @@ class Report extends Model
         'camera_id', 
         'description', 
         'status', 
-        'report_date'
+        'report_date',
+        'solution',          // Añadir este campo
+        'solution_date'      // Añadir este campo
     ];
 
     /**
@@ -40,6 +41,15 @@ class Report extends Model
      * Ejemplo: 01-10-2024
      */
     public function getReportDateAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->format('d-m-Y');
+    }
+
+    /**
+     * Formatear la fecha de solución
+     * Ejemplo: 01-10-2024
+     */
+    public function getSolutionDateAttribute($value)
     {
         return \Carbon\Carbon::parse($value)->format('d-m-Y');
     }

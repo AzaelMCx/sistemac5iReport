@@ -56,8 +56,32 @@ class ReportController extends Controller
     {
         // Obtener cámaras que tienen reportes
         $cameras = Camera::has('reports')->with('reports')->get();
-        //dd($cameras);
+        
         // Retornar la vista con las cámaras
         return view('cameras_with_reports', compact('cameras'));
+    }
+
+    // Actualizar el estatus del reporte
+    public function update(Request $request, $id)
+    {
+        // Validar los datos enviados desde AJAX
+        $request->validate([
+            'solution' => 'required|string|max:255',
+            'solution_date' => 'required|date',
+        ]);
+
+        // Encontrar el reporte por su ID
+        $report = Report::findOrFail($id);
+
+        // Actualizar los campos del reporte
+        $report->status = 'solucionado';
+        $report->solution = $request->input('solution');
+        $report->solution_date = $request->input('solution_date');
+
+        // Guardar los cambios en la base de datos
+        $report->save();
+
+        // Retornar una respuesta JSON exitosa para el manejo en el frontend
+        return response()->json(['success' => true]);
     }
 }

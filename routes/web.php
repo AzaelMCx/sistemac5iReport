@@ -40,10 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/reports/create', [ReportController::class, 'create'])->name('reports.create'); // Formulario de creación de reporte
     Route::post('/reports/store', [ReportController::class, 'store'])->name('reports.store'); // Guardar reportes
     Route::get('/reports', [ReportController::class, 'index'])->name('reports.index'); // Mostrar todos los reportes
-    Route::put('/reports/{id}', [ReportController::class, 'update'])->name('reports.update'); // Actualizar reporte
-    Route::delete('/reports/{id}', [ReportController::class, 'destroy'])->name('reports.destroy'); // Eliminar reporte
 
     Route::get('/cameras-with-reports', [ReportController::class, 'camerasWithReports'])->name('cameras.with.reports');
+    Route::put('/reports/{id}', [ReportController::class, 'update'])->name('reports.update');
 });
 
 // Archivo que contiene las rutas de autenticación (login, registro, etc.)
